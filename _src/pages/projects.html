@@ -1,0 +1,44 @@
+<!--fn name="projects_main" note="Attributes: shipped"-->
+<h1 style="font-size:clamp(2.2rem,5.5vw,3.4rem)">Projects</h1>
+<p class="lede" style="margin-top:14px">Things I've built end to end, from idea to something people actually use.</p>
+<!--/fn-->
+
+<!--fn name="ahbot" note="flagship · personal finance OS"-->
+<div class="feature">
+  <div>
+    <div class="job"><span class="org">Personal project · in daily use</span><h2 class="title">Ahbot: a personal finance operating system</h2></div>
+    <p>A system I designed, built and run for my own household. It keeps track of spending and investments automatically, and answers questions through a chat assistant and an installable app that share one engine. It runs itself, and only asks me for something when a human is genuinely needed.</p>
+    <ul class="dis">
+      <li data-m="core">Deterministic by design: every number comes from tested code, never from guesswork. AI only helps with wording, and code checks its output before anyone sees it.</li>
+      <li data-m="test">Around 5,000 automated tests, most of them written from a real failure the system once had, with the reasoning behind the fix.</li>
+      <li data-m="auto">Runs on a schedule without me, and tells me straight away if any part of it stops working.</li>
+      <li data-m="sec">Built security-first, with a threat model behind every feature. The details stay private, as they should.</li>
+    </ul>
+    <div class="pills" style="margin-top:14px"><span class="pill">Python</span><span class="pill">Automation</span><span class="pill">Installable web app</span><span class="pill">Testing</span></div>
+  </div>
+  <div>
+    <div class="phone" aria-label="Recreated screen with sample data">
+      <div class="scr">
+        <div class="chat">Ahbot</div>
+        <div class="me">how am I doing this month?</div>
+        <div class="msg"><b>On track.</b> S$642 of S$1,300 with 13 days left.<div class="meter"><span style="width:49%"></span></div><i>Food S$214 · Transport S$96 · Other S$332</i><div class="spark"><span style="height:40%"></span><span style="height:65%"></span><span style="height:30%"></span><span style="height:80%"></span><span style="height:45%"></span><span style="height:55%"></span><span style="height:35%"></span><span style="height:60%"></span></div><i>Biggest: S$88 at a hardware store, Tue</i></div>
+        <div class="msg"><b>Heads up:</b> your phone bill renews Friday (S$28).<div class="btns"><span>Got it</span><span>Snooze</span></div></div>
+      </div>
+    </div>
+    <p class="sample">recreated with sample data, not real figures</p>
+  </div>
+</div>
+<!--/fn-->
+
+<!--fn name="more_builds" note="CODE XREF: projects_main"-->
+<h2 class="title">More builds</h2>
+<div class="cards" style="margin-top:12px">
+  <article class="card"><span class="c-cmt">mobile · full stack</span><h3>Sustainability rewards platform</h3><p>A two-sided platform rewarding sustainable choices, connecting users and merchants. Built in Flutter on Supabase, with a Dockerised dev and test pipeline.</p><div class="pills"><span class="pill">Flutter</span><span class="pill">Dart</span><span class="pill">Supabase</span><span class="pill">Docker</span></div></article>
+  <article class="card"><span class="c-cmt">game · health</span><h3>Mental-health tracking game</h3><p>An interactive game that tracks wellbeing as you play, grounded in established clinical scales (GAD-7, PHQ-9) and the OCEAN personality model.</p><div class="pills"><span class="pill">Unity</span><span class="pill">C#</span></div></article>
+  <article class="card"><span class="c-cmt">AI · agents</span><h3>News-gathering AI agent</h3><p>At Keoni.ai: prototyped an information-gathering agent that scrapes the web and pulls from a news API, with a Streamlit interface to demo it.</p><div class="pills"><span class="pill">Python</span><span class="pill">News API</span><span class="pill">Streamlit</span></div></article>
+  <article class="card"><span class="c-cmt">SC2006 · NTU</span><h3>DressSense.ai</h3><p>An app and website that uses AI to refresh your wardrobe sustainably: outfit recommendations, a digital closet, and a marketplace price checker pulling live prices.</p><div class="pills"><span class="pill">AI</span><span class="pill">APIs</span><span class="pill">Mobile + web</span></div></article>
+  <article class="card"><span class="c-cmt">SC1015 · NTU</span><h3>Rainfall forecasting for smart sprinklers</h3><p>Forecast rainfall from a decade of Singapore climate data with XGBoost and time-series validation, then prototyped a sprinkler that waters only when it needs to.</p><div class="pills"><span class="pill">Python</span><span class="pill">XGBoost</span><span class="pill">Data science</span></div></article>
+  <article class="card"><span class="c-cmt">SC2002 · NTU</span><h3>University orientation system</h3><p>A command-line system in Java for running freshman orientation: event allocation, feedback and more, built on clean object-oriented design.</p><div class="pills"><span class="pill">Java</span><span class="pill">OOP</span></div></article>
+  <article class="card"><span class="c-cmt">hackathon</span><h3>DSTA BrainHack</h3><p>A cybersecurity hackathon: solved security challenges with my team under time pressure and presented our solutions to industry experts.</p><div class="pills"><span class="pill">CTF</span><span class="pill">Teamwork</span></div></article>
+</div>
+<!--/fn-->

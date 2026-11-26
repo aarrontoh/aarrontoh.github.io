@@ -1,0 +1,76 @@
+<!--fn name="start" note="Segment type: Pure code · red team"-->
+<div class="hero">
+  <div>
+    <h1>Aaron Toh</h1>
+    <p class="aka">aka <span data-decrypt style="color:var(--addr)">h8ckth3b0xes</span> <span>· red teamer · exploit developer</span></p>
+    <p class="lede">Security research and red teaming. I write the attacks, so the people defending can prove what they would catch.</p>
+    <p>I've worked on both sides of the wall: watching alerts in a security operations centre, building cyber ranges, hunting threats, sitting in a CISO's office and engineering adversary simulation on a government red team. Today I'm a cybersecurity officer at the Digital and Intelligence Service. Before all that, I wore #5 for Team Singapore.</p>
+    <div class="term inline-term" aria-label="Interactive terminal">
+      <div class="bar"><i></i><i></i><i></i><span>guest@h8ckth3b0xes: ~</span></div>
+      <div class="out" aria-live="polite"></div>
+      <div class="row"><span class="ps" aria-hidden="true">$</span><input type="text" aria-label="Terminal command" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type help"></div>
+      <div class="chips"><button type="button" data-cmd="help">help</button><button type="button" data-cmd="experience">experience</button><button type="button" data-cmd="projects">projects</button><button type="button" data-cmd="neofetch">neofetch</button><button type="button" data-cmd="flags">flags</button></div>
+    </div>
+  </div>
+  <div>
+    <div class="regs dual" aria-label="Quick facts">
+      <div class="vt" role="tablist"><button type="button" role="tab" data-v="asm" aria-selected="true">General registers</button><button type="button" role="tab" data-v="pseudo" aria-selected="false">Pseudocode-A<kbd>F5</kbd></button></div>
+      <div data-pane="asm">
+      <dl>
+        <dt>EAX</dt><dd class="n">role</dd><dd class="v">red team · exploit dev</dd>
+        <dt>EBX</dt><dd class="n">now</dd><dd class="v">C4X Cybersecurity Officer, DIS</dd>
+        <dt>ECX</dt><dd class="n">certs</dd><dd class="v">OSCP · OSWP · CEH</dd>
+        <dt>EDX</dt><dd class="n">next</dd><dd class="v">OSEE</dd>
+        <dt>ESI</dt><dd class="n">base</dd><dd class="v">Singapore</dd>
+        <dt>EDI</dt><dd class="n">degree</dd><dd class="v">NTU Computer Science, 2026</dd>
+        <dt>EIP</dt><dd class="n">jersey</dd><dd class="v">#5, bats/throws right</dd>
+      </dl>
+      </div>
+<pre class="pseudo" data-pane="pseudo" hidden><span class="cm">// decompiled from aaron.exe</span>
+<span class="ty">int</span> <span class="kw">__fastcall</span> <span class="fn">aaron</span>(<span class="ty">world_t</span> *world)
+{
+  <span class="ty">skills_t</span> s = { RED_TEAM | EXPLOIT_DEV };
+  <span class="kw">while</span> ( world-&gt;has_unpatched_systems )
+  {
+    <span class="ty">target_t</span> *t = <span class="fn">recon</span>(world);
+    <span class="kw">if</span> ( <span class="fn">authorised</span>(t) )   <span class="cm">// white hat</span>
+      <span class="fn">report</span>(<span class="fn">exploit</span>(t, s), BLUE_TEAM);
+  }
+  <span class="kw">return</span> <span class="fn">train</span>(<span class="st">"OSEE"</span>);   <span class="cm">// never returns</span>
+}</pre>
+    </div>
+    <div class="hexview">
+      {{avatar}}
+      <div class="hexdump" aria-hidden="true"><b>00000000</b>  68 38 63 6B 74 68 33 62  <i>h8ckth3b</i>
+<b>00000008</b>  30 78 65 73 00 00 00 05  <i>0xes....</i>
+<b>00000010</b>  72 65 64 20 74 65 61 6D  <i>red team</i>
+<b>00000018</b>  65 78 70 6C 6F 69 74 73  <i>exploits</i>
+<b>00000020</b>  62 61 73 65 62 61 6C 6C  <i>baseball</i>
+<b>00000028</b>  66 6F 6F 64 69 65 21 00  <i>foodie!.</i></div>
+    </div>
+  </div>
+</div>
+<!--/fn-->
+
+<!--fn name="xrefs" note="CODE XREF: everywhere"-->
+<h2 class="title">Where to next</h2>
+<p class="c-cmt">four pages, one terminal, four hidden flags</p>
+<div class="xrefs">
+  <a class="xref" href="cyber.html"><span class="c-cmt">jmp cyber</span><strong>Cyber</strong><span class="d">Red team, adversary simulation, a CISO office and a SOC. Certs and tools.</span></a>
+  <a class="xref" href="projects.html"><span class="c-cmt">jmp projects</span><strong>Projects</strong><span class="d">A personal finance OS with 5,000 tests, games, apps and AI tools.</span></a>
+  <a class="xref" href="sport.html"><span class="c-cmt">jmp sport</span><strong>Sport</strong><span class="d">Team Singapore baseball, the Asian Games, and every racquet sport going.</span></a>
+  <a class="xref" href="life.html"><span class="c-cmt">jmp life</span><strong>Life</strong><span class="d">Food, mountains, the gym and the people who matter.</span></a>
+</div>
+<!--/fn-->
+
+<!--fn name="contact" note="exported function"-->
+<h2 class="title">Say hello</h2>
+<p>I'm always up for a good conversation about offensive security, exploit development, or where to eat next.</p>
+<div class="pills">
+  <a class="pill" href="mailto:aarrontoh@gmail.com">✉ aarrontoh@gmail.com</a>
+  <button class="pill copy" type="button" data-copy="aarrontoh@gmail.com">⧉ copy email</button>
+  <a class="pill" href="https://www.linkedin.com/in/aaron-toh-sheng-rong-toh-823512200/" target="_blank" rel="noopener">in LinkedIn</a>
+  <a class="pill" href="assets/Aaron_Toh_Resume.pdf" target="_blank" rel="noopener">⤓ Resume (PDF)</a>
+  <button class="pill" type="button" data-open-term style="cursor:pointer">&gt;_ open the terminal</button>
+</div>
+<!--/fn-->

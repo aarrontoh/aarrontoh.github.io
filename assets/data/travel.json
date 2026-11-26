@@ -1,0 +1,360 @@
+{
+ "home": {
+  "name": "Singapore",
+  "lat": 1.35,
+  "lon": 103.82
+ },
+ "visited": [
+  "Austria",
+  "Bulgaria",
+  "China",
+  "Czechia",
+  "Finland",
+  "Hungary",
+  "Iceland",
+  "Indonesia",
+  "Italy",
+  "Japan",
+  "Laos",
+  "Malaysia",
+  "Netherlands",
+  "Norway",
+  "South Korea",
+  "Sweden",
+  "Switzerland",
+  "Taiwan",
+  "Thailand",
+  "Vietnam"
+ ],
+ "wishlist": [
+  "Canada",
+  "New Zealand",
+  "United States of America"
+ ],
+ "display": {
+  "Bosnia and Herz.": "Bosnia and Herzegovina",
+  "Macedonia": "North Macedonia",
+  "Central African Rep.": "Central African Republic",
+  "Dem. Rep. Congo": "DR Congo",
+  "Eq. Guinea": "Equatorial Guinea",
+  "eSwatini": "Eswatini",
+  "S. Sudan": "South Sudan",
+  "Dominican Rep.": "Dominican Republic",
+  "United States of America": "United States",
+  "Solomon Is.": "Solomon Islands"
+ },
+ "cities": [
+  {
+   "name": "Vienna",
+   "country": "Austria",
+   "lat": 48.21,
+   "lon": 16.37
+  },
+  {
+   "name": "Salzburg",
+   "country": "Austria",
+   "lat": 47.81,
+   "lon": 13.06
+  },
+  {
+   "name": "Hallstatt",
+   "country": "Austria",
+   "lat": 47.56,
+   "lon": 13.65
+  },
+  {
+   "name": "Sofia",
+   "country": "Bulgaria",
+   "lat": 42.7,
+   "lon": 23.32
+  },
+  {
+   "name": "Hangzhou",
+   "country": "China",
+   "lat": 30.27,
+   "lon": 120.16
+  },
+  {
+   "name": "Prague",
+   "country": "Czechia",
+   "lat": 50.08,
+   "lon": 14.44
+  },
+  {
+   "name": "Rovaniemi",
+   "country": "Finland",
+   "lat": 66.5,
+   "lon": 25.73
+  },
+  {
+   "name": "Budapest",
+   "country": "Hungary",
+   "lat": 47.5,
+   "lon": 19.04
+  },
+  {
+   "name": "Reykjavík",
+   "country": "Iceland",
+   "lat": 64.15,
+   "lon": -21.94
+  },
+  {
+   "name": "Golden Circle",
+   "country": "Iceland",
+   "lat": 64.33,
+   "lon": -20.12
+  },
+  {
+   "name": "Vík / South Coast",
+   "country": "Iceland",
+   "lat": 63.42,
+   "lon": -19.01
+  },
+  {
+   "name": "Akureyri",
+   "country": "Iceland",
+   "lat": 65.68,
+   "lon": -18.09
+  },
+  {
+   "name": "Snæfellsnes",
+   "country": "Iceland",
+   "lat": 64.87,
+   "lon": -23.62
+  },
+  {
+   "name": "Batam",
+   "country": "Indonesia",
+   "lat": 1.13,
+   "lon": 104.05
+  },
+  {
+   "name": "Bintan",
+   "country": "Indonesia",
+   "lat": 1.08,
+   "lon": 104.48
+  },
+  {
+   "name": "Venice",
+   "country": "Italy",
+   "lat": 45.44,
+   "lon": 12.33
+  },
+  {
+   "name": "Dolomites (Val Gardena / Cortina)",
+   "country": "Italy",
+   "lat": 46.55,
+   "lon": 11.85
+  },
+  {
+   "name": "Amalfi Coast / Naples",
+   "country": "Italy",
+   "lat": 40.63,
+   "lon": 14.6
+  },
+  {
+   "name": "Tokyo",
+   "country": "Japan",
+   "lat": 35.68,
+   "lon": 139.69
+  },
+  {
+   "name": "Hokkaido (Sapporo)",
+   "country": "Japan",
+   "lat": 43.06,
+   "lon": 141.35
+  },
+  {
+   "name": "Vientiane",
+   "country": "Laos",
+   "lat": 17.98,
+   "lon": 102.63
+  },
+  {
+   "name": "Kuala Lumpur",
+   "country": "Malaysia",
+   "lat": 3.14,
+   "lon": 101.69
+  },
+  {
+   "name": "Johor Bahru",
+   "country": "Malaysia",
+   "lat": 1.49,
+   "lon": 103.74
+  },
+  {
+   "name": "Malacca",
+   "country": "Malaysia",
+   "lat": 2.19,
+   "lon": 102.25
+  },
+  {
+   "name": "Penang",
+   "country": "Malaysia",
+   "lat": 5.41,
+   "lon": 100.33
+  },
+  {
+   "name": "Genting Highlands",
+   "country": "Malaysia",
+   "lat": 3.42,
+   "lon": 101.79
+  },
+  {
+   "name": "Langkawi",
+   "country": "Malaysia",
+   "lat": 6.35,
+   "lon": 99.8
+  },
+  {
+   "name": "Ipoh",
+   "country": "Malaysia",
+   "lat": 4.6,
+   "lon": 101.09
+  },
+  {
+   "name": "Oslo",
+   "country": "Norway",
+   "lat": 59.91,
+   "lon": 10.75
+  },
+  {
+   "name": "Bergen",
+   "country": "Norway",
+   "lat": 60.39,
+   "lon": 5.32
+  },
+  {
+   "name": "Lofoten",
+   "country": "Norway",
+   "lat": 68.23,
+   "lon": 13.98
+  },
+  {
+   "name": "Geiranger / Flåm",
+   "country": "Norway",
+   "lat": 62.1,
+   "lon": 7.21
+  },
+  {
+   "name": "Ålesund",
+   "country": "Norway",
+   "lat": 62.47,
+   "lon": 6.15
+  },
+  {
+   "name": "Seoul",
+   "country": "South Korea",
+   "lat": 37.57,
+   "lon": 126.98
+  },
+  {
+   "name": "Stockholm",
+   "country": "Sweden",
+   "lat": 59.33,
+   "lon": 18.07
+  },
+  {
+   "name": "Gothenburg",
+   "country": "Sweden",
+   "lat": 57.71,
+   "lon": 11.97
+  },
+  {
+   "name": "Malmö",
+   "country": "Sweden",
+   "lat": 55.6,
+   "lon": 13.0
+  },
+  {
+   "name": "Zurich",
+   "country": "Switzerland",
+   "lat": 47.38,
+   "lon": 8.54
+  },
+  {
+   "name": "Interlaken",
+   "country": "Switzerland",
+   "lat": 46.69,
+   "lon": 7.86
+  },
+  {
+   "name": "Grindelwald",
+   "country": "Switzerland",
+   "lat": 46.62,
+   "lon": 8.04
+  },
+  {
+   "name": "Lauterbrunnen",
+   "country": "Switzerland",
+   "lat": 46.59,
+   "lon": 7.91
+  },
+  {
+   "name": "Taipei",
+   "country": "Taiwan",
+   "lat": 25.03,
+   "lon": 121.57
+  },
+  {
+   "name": "Jiufen",
+   "country": "Taiwan",
+   "lat": 25.11,
+   "lon": 121.84
+  },
+  {
+   "name": "Taichung",
+   "country": "Taiwan",
+   "lat": 24.15,
+   "lon": 120.67
+  },
+  {
+   "name": "Bangkok",
+   "country": "Thailand",
+   "lat": 13.76,
+   "lon": 100.5
+  },
+  {
+   "name": "Chiang Mai",
+   "country": "Thailand",
+   "lat": 18.79,
+   "lon": 98.98
+  },
+  {
+   "name": "Ho Chi Minh City",
+   "country": "Vietnam",
+   "lat": 10.82,
+   "lon": 106.63
+  },
+  {
+   "name": "Hanoi",
+   "country": "Vietnam",
+   "lat": 21.03,
+   "lon": 105.85
+  },
+  {
+   "name": "Jönköping",
+   "country": "Sweden",
+   "lat": 57.78,
+   "lon": 14.16
+  },
+  {
+   "name": "Lund",
+   "country": "Sweden",
+   "lat": 55.7,
+   "lon": 13.19
+  },
+  {
+   "name": "Gränna",
+   "country": "Sweden",
+   "lat": 58.03,
+   "lon": 14.46
+  },
+  {
+   "name": "Spiez",
+   "country": "Switzerland",
+   "lat": 46.69,
+   "lon": 7.68
+  }
+ ]
+}

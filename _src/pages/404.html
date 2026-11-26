@@ -1,0 +1,12 @@
+<!--fn name="segfault" note="exception"-->
+<div class="segv">
+<pre><b>Program received signal SIGSEGV, Segmentation fault.</b>
+0x00000404 in ?? ()
+(gdb) bt
+#0  0x00000404 in page_not_found ()
+#1  0x00401000 in start ()</pre>
+<h1 style="font-size:clamp(2rem,6vw,3.2rem)">That address isn't mapped.</h1>
+<p class="lede">The page you tried to reach doesn't exist, or I moved it.</p>
+<div class="pills"><a class="pill" href="index.html">jmp home</a><a class="pill" href="cyber.html">jmp cyber</a><a class="pill" href="projects.html">jmp projects</a></div>
+</div>
+<!--/fn-->

@@ -1,0 +1,162 @@
+<!-- Recon, step two. You read the source; good. Decode this (base64) and submit it in the terminal:
+     aDhja3t2MTN3X3MwdXJjM18xc19yM2Mwbn0=
+-->
+<!--fn name="cyber_main" note="Attributes: offensive"-->
+<h1 style="font-size:clamp(2.2rem,5.5vw,3.4rem)">Cyber</h1>
+<p class="c-cmt" style="margin-top:10px">tip: press F5 on any job below to see it decompiled</p>
+<p class="lede" style="margin-top:6px">From watching alerts in a SOC to writing the attacks the SOC has to catch.</p>
+<p>My focus is red teaming and exploit development: building the techniques real attackers use, running them safely, and helping defenders close the gaps they reveal. I care about the engineering behind offence. Tooling that's reliable, repeatable and well tested beats a clever one-off every time.</p>
+<!--/fn-->
+
+<!--fn name="career_graph" note="Graph view · press space in IDA, scroll here"-->
+<h2 class="title">Career, in graph view</h2>
+<p class="c-cmt">each block is a basic block; each edge is a jump I took</p>
+<div class="graph" role="list">
+  <div class="node" role="listitem"><header>loc_2022 <span>SOC</span></header><div>Security Operations Centre Analyst<br><em>Digital and Intelligence Service · 2022</em></div></div>
+  <div class="edge"><span>jz curious</span></div>
+  <div class="node" role="listitem"><header>loc_2023 <span>build</span></header><div>Cyber Test Range<br><em>Digital and Intelligence Service · 2023</em></div></div>
+  <div class="edge"><span>jmp</span></div>
+  <div class="node" role="listitem"><header>loc_2024 <span>hunt</span></header><div>Threat Hunting Centre<br><em>Digital and Intelligence Service · 2024</em></div></div>
+  <div class="edge jmp"><span>call governance</span></div>
+  <div class="node" role="listitem"><header>loc_2025a <span>advise</span></header><div>CISO office, Singapore &amp; Myanmar<br><em>PwC · 2025</em></div></div>
+  <div class="edge"><span>jnz offence</span></div>
+  <div class="node" role="listitem"><header>loc_2025b <span>attack</span></header><div>Red Team DevOps, Adversary Simulation<br><em>GovTech, Cyber Security Group · 2025 – 2026</em></div></div>
+  <div class="edge"><span>ret home</span></div>
+  <div class="node now" role="listitem"><header>loc_2026 <span>now</span></header><div>C4X Cybersecurity Officer<br><em>Digital and Intelligence Service · 2026 – present</em></div></div>
+  <div class="edge dash"><span>loop: study</span></div>
+  <div class="node future" role="listitem"><header>loc_next <span>exploit</span></header><div>OSEE and deeper exploit development<br><em>in progress</em></div></div>
+</div>
+<!--/fn-->
+
+<!--fn name="dis_c4x" note="Jun 2026 – present"-->
+<div class="job"><span class="org">Digital and Intelligence Service</span><h2 class="title">C4X Cybersecurity Officer</h2><span class="when">Jun 2026 – present</span></div>
+<p>Back where it started, this time full-time. I work on advanced offensive cyber capabilities that help defend Singapore in the digital domain.</p>
+<ul class="dis">
+  <li data-m="build">Research and engineering at the sharp end of offensive security.</li>
+  <li data-m="team">Working alongside some of the country's best specialists on mission-critical cyber operations.</li>
+</ul>
+<p class="c-cmt" style="margin-top:14px">most of it can't be written down here, which usually means it's the interesting part</p>
+<!--/fn-->
+
+<!--fn name="govtech_red_team" note="Jun 2025 – Mar 2026"-->
+<div class="job"><span class="org">GovTech Singapore · Cyber Security Group</span><h2 class="title">Red Team DevOps, Adversary Simulation</h2><span class="when">Jun 2025 – Mar 2026</span></div>
+<div class="dual"><div class="vt" role="tablist"><button type="button" role="tab" data-v="asm" aria-selected="true">IDA View-A</button><button type="button" role="tab" data-v="pseudo" aria-selected="false">Pseudocode-A<kbd>F5</kbd></button></div><div data-pane="asm"><p>I built the engineering behind adversary simulation: a platform that runs real-world attacker techniques against live defences, safely and on demand, so blue teams can prove what they would and wouldn't catch.</p>
+<ul class="dis">
+  <li data-m="build">Designed and built an adversary-emulation platform that executes MITRE ATT&amp;CK techniques in a controlled, repeatable way for purple-team exercises.</li>
+  <li data-m="write">Wrote a library of attacker techniques in C and C++, each mapped to ATT&amp;CK, including Beacon Object Files for fileless, in-memory execution.</li>
+  <li data-m="ship">Engineered a GitLab CI/CD pipeline that compiles every technique for Windows and Linux automatically, with Docker-based cross-platform builds and a catalogue of versioned artifacts.</li>
+  <li data-m="run">Built an offline execution engine that sequences techniques step by step (run, wait, log) for isolated environments.</li>
+  <li data-m="prove">Worked with security engineers to measure detection coverage against known attack paths and close the gaps.</li>
+</ul></div><pre class="pseudo" data-pane="pseudo" hidden><span class="ty">void</span> <span class="fn">adversary_simulation</span>(<span class="ty">range_t</span> *range)
+{
+  <span class="kw">for</span> ( <span class="ty">ttp_t</span> *t = mitre_attack; t; t = t-&gt;next )
+  {
+    <span class="ty">binary_t</span> *b = <span class="fn">gitlab_ci_build</span>(t, WIN64 | LINUX); <span class="cm">// C/C++, BOFs</span>
+    <span class="fn">catalogue_add</span>(b);                         <span class="cm">// versioned</span>
+  }
+  <span class="ty">plan_t</span> *p = <span class="fn">sequence</span>(range-&gt;scenario);     <span class="cm">// offline-capable</span>
+  <span class="kw">while</span> ( (step = <span class="fn">next</span>(p)) )
+  {
+    <span class="fn">run</span>(step); <span class="fn">wait</span>(step-&gt;delay); <span class="fn">log</span>(step);
+  }
+  <span class="ty">coverage_t</span> c = <span class="fn">validate_detections</span>(range-&gt;blue_team);
+  <span class="fn">close_gaps</span>(&amp;c);                            <span class="cm">// the point of it all</span>
+}</pre></div>
+<!--/fn-->
+
+<!--fn name="pwc_ciso_office" note="Jan 2025 – May 2025"-->
+<div class="job"><span class="org">PwC Singapore</span><h2 class="title">Network Information Security Analyst</h2><span class="when">Jan 2025 – May 2025</span></div>
+<div class="dual"><div class="vt" role="tablist"><button type="button" role="tab" data-v="asm" aria-selected="true">IDA View-A</button><button type="button" role="tab" data-v="pseudo" aria-selected="false">Pseudocode-A<kbd>F5</kbd></button></div><div data-pane="asm"><p>I worked directly with the CISO for Singapore and Myanmar, on the side of security that decides what a large firm is allowed to run, and how its people think about risk.</p>
+<ul class="dis">
+  <li data-m="lead">Led the CISO's weekly discussion across PwC's APAC territories.</li>
+  <li data-m="teach">Ran phishing awareness training and helped build the firm-wide phishing e-learning module, plus Cybersecurity Awareness Month programmes and newsletters.</li>
+  <li data-m="assess">Assessed new technology before it went live (servers, end-user and web applications, in-house builds) against PwC's Technology Risk Framework.</li>
+  <li data-m="ship">Supported the migration and pilot of Forcepoint across PwC Singapore, working with legal, compliance and business teams.</li>
+</ul></div><pre class="pseudo" data-pane="pseudo" hidden><span class="ty">bool</span> <span class="fn">may_go_live</span>(<span class="ty">tech_t</span> *t)          <span class="cm">// servers, web, in-house</span>
+{
+  <span class="ty">risk_t</span> r = <span class="fn">assess</span>(t, TECHNOLOGY_RISK_FRAMEWORK);
+  <span class="kw">if</span> ( r.level &gt; ACCEPTABLE )
+    <span class="kw">return</span> <span class="nu">false</span>;
+  <span class="kw">return</span> <span class="fn">compliant</span>(t, legal, compliance);
+}
+
+<span class="ty">void</span> <span class="fn">every_week</span>(<span class="ty">void</span>)
+{
+  <span class="fn">lead</span>(CISO_DISCUSSION, APAC);
+  <span class="fn">train</span>(PHISHING_AWARENESS, <span class="st">"firm-wide"</span>);
+  <span class="fn">pilot</span>(FORCEPOINT, <span class="st">"PwC Singapore"</span>);
+}</pre></div>
+<!--/fn-->
+
+<!--fn name="dis_threat_hunting" note="May 2024 – Aug 2024"-->
+<div class="job"><span class="org">Digital and Intelligence Service</span><h2 class="title">Threat Hunting Centre</h2><span class="when">May 2024 – Aug 2024</span></div>
+<ul class="dis">
+  <li data-m="tool">Built tooling that made threat hunts faster and more thorough.</li>
+  <li data-m="emu">Emulated attacker techniques in closed sandboxes to surface indicators of compromise.</li>
+  <li data-m="intel">Worked with the threat intelligence team to turn findings into precise hunting actions.</li>
+</ul>
+<!--/fn-->
+
+<!--fn name="dis_cyber_range" note="May 2023 – Aug 2023"-->
+<div class="job"><span class="org">Digital and Intelligence Service</span><h2 class="title">Cyber Test Range</h2><span class="when">May 2023 – Aug 2023</span></div>
+<ul class="dis">
+  <li data-m="design">Designed the networks and scenarios behind cyber exercises, then tested them end to end.</li>
+  <li data-m="infra">Architected simulated environments on VMware ESXi and vSphere, and built tooling for the range.</li>
+</ul>
+<!--/fn-->
+
+<!--fn name="dis_soc" note="Jun 2022 – Aug 2022"-->
+<div class="job"><span class="org">Digital and Intelligence Service</span><h2 class="title">Security Operations Centre Analyst</h2><span class="when">Jun 2022 – Aug 2022</span></div>
+<ul class="dis">
+  <li data-m="watch">Part of 24/7 SOC operations: real-time monitoring and incident response.</li>
+  <li data-m="learn">Where it started: learning how attacks actually look from the defender's chair.</li>
+</ul>
+<!--/fn-->
+
+<!--fn name="proudest" note="comment: worth reading"-->
+<h2 class="title">The work I'm proudest of</h2>
+<div class="callout">
+  <p>Turning red-team tradecraft into engineering. A technique that works once on a laptop is a trick; the same technique compiled by a pipeline, versioned, sequenced and logged so defenders can replay it whenever they like is a capability. Building that, so a blue team can test itself against the real thing instead of guessing, is the part of security I enjoy most.</p>
+</div>
+<!--/fn-->
+
+<!--fn name="imports" note="certifications"-->
+<h2 class="title">Certifications</h2>
+<p class="c-cmt">Imports window</p>
+<div class="tblwrap"><table class="tbl">
+  <thead><tr><th>Address</th><th>Name</th><th>Library</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td class="a">00409000</td><td>OSCP · Certified Professional</td><td>OffSec</td><td class="s">✔ certified</td></tr>
+    <tr><td class="a">00409008</td><td>OSWP · Wireless Professional</td><td>OffSec</td><td class="s">✔ certified</td></tr>
+    <tr><td class="a">00409010</td><td>CEH · Certified Ethical Hacker</td><td>EC-Council</td><td class="s">✔ certified</td></tr>
+    <tr><td class="a">00409018</td><td>Data Analytics</td><td>Nanyang Polytechnic</td><td class="s">✔ completed</td></tr>
+    <tr><td class="a">00409020</td><td>CCNA</td><td>Cisco</td><td class="s">✔ trained</td></tr>
+    <tr><td class="a">00409028</td><td>DART: malware analysis, pen-testing, network monitoring, forensics</td><td>DART</td><td class="s">✔ trained</td></tr>
+    <tr><td class="a">00409030</td><td>OSEE · Exploitation Expert</td><td>OffSec</td><td style="color:var(--addr)">⟳ next</td></tr>
+  </tbody>
+</table></div>
+<!--/fn-->
+
+<!--fn name="strings" note="skills and tools"-->
+<h2 class="title">Toolkit</h2>
+<p class="c-cmt">Strings window</p>
+<div class="strings">
+  <section><h3>Offence</h3><ul><li>MITRE ATT&amp;CK</li><li>Beacon Object Files</li><li>C/C++ tradecraft</li><li>Windows internals</li><li>Purple teaming</li><li>Pen testing</li></ul></section>
+  <section><h3>Reversing &amp; debugging</h3><ul><li>IDA</li><li>WinDbg</li><li>CFF Explorer</li><li>PowerShell</li><li>Linux tooling</li></ul></section>
+  <section><h3>Languages</h3><ul><li>Python</li><li>C</li><li>C++</li><li>Rust</li><li>Java</li><li>Dart</li><li>SQL</li><li>JavaScript</li></ul></section>
+  <section><h3>Infrastructure</h3><ul><li>GitLab CI/CD</li><li>Docker</li><li>VMware ESXi</li><li>vSphere</li><li>Scapy</li><li>Supabase</li><li>Postgres</li></ul></section>
+</div>
+<!--/fn-->
+
+<!--fn name="education" note="NTU · HCI"-->
+<h2 class="title">Education</h2>
+<ul class="dis">
+  <li data-m="2026">Bachelor of Science (Computer Science), Nanyang Technological University. Graduated May 2026.</li>
+  <li data-m="2020">Hwa Chong Institution. A-levels in Computing, Mathematics, Physics and Economics; Class Executive Committee. Computing is where the security bug bit.</li>
+</ul>
+<!--/fn-->
+
+<!--fn name="writeups" note="TODO"-->
+<h2 class="title">Write-ups</h2>
+<p>Coming soon: write-ups and posts on exploit development and red-team engineering. In the meantime, the terminal has a few secrets of its own.</p>
+<!--/fn-->

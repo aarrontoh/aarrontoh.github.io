@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{desc}}">
+<meta name="theme-color" content="#0a0e13">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{desc}}">
+<meta property="og:type" content="website">
+<link rel="icon" href="{{favicon}}">
+<meta property="og:image" content="https://aarrontoh.github.io/assets/og.png">
+<meta property="og:url" content="https://aarrontoh.github.io/{{file}}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aarrontoh.github.io/{{file}}">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Aaron Toh","alternateName":"h8ckth3b0xes","url":"https://aarrontoh.github.io/","jobTitle":"C4X Cybersecurity Officer","worksFor":{"@type":"GovernmentOrganization","name":"Digital and Intelligence Service"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Nanyang Technological University"},"knowsAbout":["Red teaming","Exploit development","Adversary simulation","Penetration testing"],"sameAs":["https://www.linkedin.com/in/aaron-toh-sheng-rong-toh-823512200/"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="{{page}}">
+<a class="skip" href="#view">Skip to content</a>
+<div class="boot" aria-hidden="true"><pre><b>IDA</b> · loading <b>h8ckth3b0xes.exe</b>
+  Format      : Portable Executable for Humans (PE64)
+  Imagebase   : 0x00400000 · Singapore
+  Analysing   : red_team <i>✔</i>  exploit_dev <i>✔</i>  baseball <i>✔</i>  food <i>✔</i>
+  FLIRT       : 4 flags identified (hidden)
+<i>The initial autoanalysis has been finished.</i></pre><span class="skip2">tap or press any key to skip</span></div>
+<header class="top">
+  <div class="in">
+    <a class="brand" href="index.html" aria-label="h8ckth3b0xes home">{{avatar_plain}}<span class="txt"><b>h8ck</b>th3b0xes</span></a>
+    <nav class="tabs" aria-label="Pages">{{tabs}}</nav>
+    <button class="termbtn" type="button" data-open-term aria-label="Open the terminal">&gt;_<span class="lbl"> terminal</span></button>
+  </div>
+  <nav class="navband" aria-label="Navigation band: sections of this page"></nav>
+</header>
+
+<div class="ws">
+  <aside class="fnwin" aria-label="Sections on this page">
+    <button class="jumpbtn" type="button" data-jump>⌕ jump to… <kbd>G</kbd></button>
+    <h2>Functions window</h2>
+    <ol>{{fnlist}}</ol>
+    <div class="meta"><span>{{count}} functions</span><span>press <kbd>`</kbd> for terminal</span><span data-flags>flags 0/4</span></div>
+  </aside>
+  <main class="view" id="view">
+{{body}}
+  </main>
+</div>
+
+<footer class="foot">
+  <div class="in">
+    <span>© 2026 Aaron Toh</span>
+    <a href="mailto:aarrontoh@gmail.com">aarrontoh@gmail.com</a>
+    <a href="https://www.linkedin.com/in/aaron-toh-sheng-rong-toh-823512200/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="assets/Aaron_Toh_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+    <span class="fl" data-flags>flags 0/4</span>
+  </div>
+</footer>
+
+<div class="dock" aria-label="Terminal">
+  <div class="term">
+    <div class="bar" role="button" tabindex="0" aria-expanded="false"><i></i><i></i><i></i><span>Output window · guest@h8ckth3b0xes</span><span class="flags" data-flags>flags 0/4</span><button type="button" tabindex="-1">▴ open</button></div>
+    <div class="out" aria-live="polite"></div>
+    <div class="row"><span class="ps" aria-hidden="true">$</span><input type="text" aria-label="Terminal command" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type help"></div>
+    <div class="chips"><button type="button" data-cmd="help">help</button><button type="button" data-cmd="whoami">whoami</button><button type="button" data-cmd="experience">experience</button><button type="button" data-cmd="man aaron">man aaron</button><button type="button" data-cmd="flags">flags</button><button type="button" data-cmd="hint">hint</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="god" hidden role="dialog" aria-modal="true" aria-labelledby="god-h">
+  <div class="box">
+    <h2 id="god-h">↑↑↓↓←→←→BA · god mode</h2>
+    <p>Thirty extra lives, as Contra intended. You found flag 4:</p>
+    <code class="flagtext" style="color:var(--str)"></code>
+    <p class="c-cmt" style="margin:0">it's already counted. type flags in the terminal to see your progress</p>
+    <button type="button" data-close>continue</button>
+  </div>
+</div>
+<div class="overlay" id="cardflag" hidden role="dialog" aria-modal="true" aria-labelledby="cf-h">
+  <div class="box">
+    <h2 id="cf-h">#5 · walk-off</h2>
+    <p>Jersey numbers matter. You found flag 3:</p>
+    <code id="f3text" style="color:var(--str)"></code>
+    <button type="button" data-close>back to the field</button>
+  </div>
+</div>
+<div class="overlay" id="root" hidden role="dialog" aria-modal="true" aria-labelledby="root-h">
+  <div class="box">
+    <h2 id="root-h">root@h8ckth3b0xes:~#</h2>
+    {{beagle}}
+    <p>All four flags. You'd do well on a red team.</p>
+    <p class="c-cmt" style="margin:0">psst: there's a level 2. it starts where every recon starts.</p>
+    <p>If you got this far, I'd genuinely like to hear from you: <a href="mailto:aarrontoh@gmail.com">aarrontoh@gmail.com</a> or <a href="https://www.linkedin.com/in/aaron-toh-sheng-rong-toh-823512200/" target="_blank" rel="noopener">LinkedIn</a>. Mention the beagle.</p>
+    <button type="button" data-close>exit</button>
+  </div>
+</div>
+
+<div class="overlay" id="elite" hidden role="dialog" aria-modal="true" aria-labelledby="elite-h">
+  <div class="box">
+    <h2 id="elite-h">NT AUTHORITY\SYSTEM</h2>
+    <p>Recon, reversing and forensics: all seven flags. That's not luck.</p>
+    <p>Seriously, say hi: <a href="mailto:aarrontoh@gmail.com">aarrontoh@gmail.com</a>. Tell me which flag took longest.</p>
+    <button type="button" data-close>exit</button>
+  </div>
+</div>
+<div class="overlay jump" id="jump" hidden role="dialog" aria-modal="true" aria-label="Jump to function">
+  <div class="box">
+    <header><span>Jump to function</span><span><kbd>↑</kbd><kbd>↓</kbd> <kbd>enter</kbd> · <kbd>esc</kbd></span></header>
+    <input type="text" id="jumpq" placeholder="type a name: govtech, baseball, food…" autocomplete="off" spellcheck="false" aria-label="Search sections">
+    <ol id="jumplist"></ol>
+  </div>
+</div>
+<script>window.H8CK_FUNCS = {{index}};</script>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

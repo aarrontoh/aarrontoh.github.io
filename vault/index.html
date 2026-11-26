@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>/vault · h8ckth3b0xes</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>
+.vault{max-width:760px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 80px max(16px,env(safe-area-inset-left,0px));display:grid;gap:22px}
+.vault .card{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:18px;display:grid;gap:10px}
+.vault input{background:#070a0e;border:1px solid var(--line-2);border-radius:6px;color:var(--fg);font:14px var(--mono);padding:9px 11px;flex:1;min-width:0}
+.vault button{font:700 13px var(--mono);border:0;border-radius:6px;padding:9px 14px;background:var(--addr);color:var(--bg);cursor:pointer}
+.vault .row2{display:flex;gap:8px;flex-wrap:wrap}
+.vault pre{margin:0;background:#070a0e;border:1px solid var(--line);border-radius:6px;padding:14px;font:12.5px/1.65 var(--mono);overflow-x:auto;color:var(--fg)}
+.vault .out{font:13px var(--mono);min-height:1.6em}
+</style>
+</head>
+<body data-page="vault" style="padding-bottom:0">
+<!-- level 2, flag A (recon). robots.txt is a list of places someone didn't want you to look.
+     h8ck{r0b0ts_txt_1s_r3c0n_t00} -->
+<main class="vault">
+  <p class="c-cmt" style="margin:0">403 · you were not supposed to find this page</p>
+  <h1 style="font-size:clamp(2rem,6vw,3rem)">/vault</h1>
+  <p class="lede">Level 2 has three flags: recon, reversing and forensics. You've already found the first one, if you read this page the way a red teamer would. Submit flags in the terminal on any page.</p>
+
+  <section class="card">
+    <h2 class="title" style="margin:0">crackme.js</h2>
+    <p style="margin:0">Find the key. Reading the code below is allowed; that's the whole point.</p>
+<pre id="src">function check(key) {
+  const T = [42, 47, 67, 78, 33, 87, 105, 108, 96];
+  if (key.length !== T.length) return false;
+  for (let i = 0; i < key.length; i++)
+    if (((key.charCodeAt(i) ^ 0x5a) + i * 7 &amp; 0xff) !== T[i]) return false;
+  return true;   // the right key also decrypts flag B
+}</pre>
+    <div class="row2"><input id="key" placeholder="key" autocomplete="off" spellcheck="false" aria-label="Crackme key"><button type="button" id="try">run</button></div>
+    <div class="out" id="out" role="status"></div>
+  </section>
+
+  <section class="card">
+    <h2 class="title" style="margin:0">flag C</h2>
+    <p style="margin:0">Every time this site is shared, the same picture goes with it. Pictures can carry more than pixels. <code>strings</code> is your friend.</p>
+  </section>
+
+  <p><a href="../index.html">← back to the site</a></p>
+</main>
+<script>
+(() => {
+  const T = [42, 47, 67, 78, 33, 87, 105, 108, 96], ENC = [24, 74, 12, 8, 36, 22, 85, 19, 45, 65, 1, 48, 13, 111, 26, 58, 82, 28, 19, 0, 22, 19, 43, 95, 85, 15, 15];
+  const check = k => k.length === T.length && [...k].every((c, i) => (((c.charCodeAt(0) ^ 0x5a) + i * 7) & 0xff) === T[i]);
+  const out = document.getElementById("out"), key = document.getElementById("key");
+  function run() {
+    const k = key.value.trim();
+    if (!check(k)) { out.style.color = "var(--hot)"; out.textContent = "✗ wrong key"; return; }
+    const flag = ENC.map((b, i) => String.fromCharCode(b ^ k.charCodeAt(i % k.length))).join("");
+    out.style.color = "var(--str)"; out.textContent = "✔ " + flag + "   (submit it in the terminal)";
+  }
+  document.getElementById("try").addEventListener("click", run);
+  key.addEventListener("keydown", e => { if (e.key === "Enter") run(); });
+})();
+</script>
+</body>
+</html>
